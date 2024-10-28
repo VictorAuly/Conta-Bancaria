@@ -6,8 +6,8 @@ import Visualização.EntradaSaida;
 public class Controladora {
 
   public Conta iniciaConta() {
-    JOptionPane.showMessageDialog(null, "Vamos criar uma conta!");
     
+    JOptionPane.showMessageDialog(null, "Vamos criar uma conta!");
     Conta conta = new Conta();
     conta.setTitularDaConta(EntradaSaida.solicitaTitular()); 
     conta.setTipoConta(EntradaSaida.solicitarTipoDeConta());

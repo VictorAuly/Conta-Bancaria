@@ -13,7 +13,6 @@ public class EntradaSaida {
    public static int solicitarTipoDeConta(){
     String[] tipoConta = {"Conta Poupança","Conta Corrente"};
     JComboBox<String> boxTipoConta = new JComboBox<>(tipoConta);
-    //JOptionPane.showConfirmDialog(null, boxTipoConta,"Qual o seu tipo de conta", JOptionPane.OK_CANCEL_OPTION);
     boxTipoConta.setSelectedIndex(0);
                 
        int resultado;
@@ -52,13 +51,11 @@ public class EntradaSaida {
        do {
            resultado = JOptionPane.showConfirmDialog(null, boxMenu, 
                    "Bem vindo ao Banco Senai, selecione a opção desejada", JOptionPane.OK_CANCEL_OPTION);
-
            if (resultado != JOptionPane.OK_OPTION) {
                JOptionPane.showMessageDialog(null, 
                        "Você deve selecionar uma das opções para continuar.", 
                        "Seleção Obrigatória", JOptionPane.WARNING_MESSAGE);
            }
-
        } while (resultado != JOptionPane.OK_OPTION); 
        return (int) boxMenu.getSelectedIndex();
    }
@@ -117,8 +114,8 @@ public class EntradaSaida {
       JOptionPane.showMessageDialog(null,"O programa será encerrado!");
   }
    public static void exibirDadosDaConta(String titular, int tipoConta, Double saldo) {
+   
    String StringtipoConta;
-
    if (tipoConta == 0) {
       StringtipoConta = "Conta Poupança";
    } else{
@@ -147,7 +144,6 @@ public class EntradaSaida {
           } else {
               extratoGeral.append("\nNenhum depósito foi realizado.\n");
           }
-  
           if (!historicoSaques.isEmpty()) {
               extratoGeral.append("\n--- Saques ---\n");
               for (Movimentacao movimentacao : historicoSaques) {
@@ -158,7 +154,6 @@ public class EntradaSaida {
               extratoGeral.append("\nNenhum saque foi realizado.\n");
           }
       }
-  
       JOptionPane.showMessageDialog(null, extratoGeral.toString());
   }  
 }

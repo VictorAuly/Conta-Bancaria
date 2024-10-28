@@ -6,7 +6,6 @@ public class Movimentacao {
     private Double valor;
     private Date data;
 
-
     public int getTipo() {
         return tipoDeOperacao;
     }

@@ -10,7 +10,6 @@ public class Conta {
     private ArrayList<Movimentacao>historicoDepositos = new ArrayList<>();
     private ArrayList<Movimentacao>historicoSaques = new ArrayList<>();
 
-
    public Double getSaldo() {
        return saldo;
    }
