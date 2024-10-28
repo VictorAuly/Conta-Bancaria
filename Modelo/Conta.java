@@ -48,7 +48,9 @@ public class Conta {
         JOptionPane.showMessageDialog(null, 
             "Saque não permitido! O saldo não pode ficar abaixo de -R$1000.",
             "Erro de Saque", JOptionPane.ERROR_MESSAGE);
+            saldo += saques;
         return;
+        
     }
     Movimentacao movimentacao = new Movimentacao();
     movimentacao.setTipo(1);
